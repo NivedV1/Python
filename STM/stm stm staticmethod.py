@@ -1,2 +1,2 @@
-stm stm staticmethod
-sdadass
+for i in range (20):
+    print("HEllo world")
