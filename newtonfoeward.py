@@ -25,6 +25,3 @@ for k in range(1,n-1):
      for j in range(0,n-1-k):
         y[k][j]=y[k-1][j+1]-y[k-1][j]               
 print(y)
-#k=1 j=0,1,2
-#k=2 j=0,1
-#k=3 j=0
