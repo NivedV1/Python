@@ -12,7 +12,7 @@ def diff(a):
     return(lst)
 n=4
 x_val=[0,1,2,3]
-y_val=[1,0,1,10]
+y_val=[1,10,30,100]
 
 print(x_val);print(y_val)
 #lst=[[] for _ in range(n-1)]
@@ -25,3 +25,9 @@ for k in range(1,n-1):
      for j in range(0,n-1-k):
         y[k][j]=y[k-1][j+1]-y[k-1][j]               
 print(y)
+const=1
+inter=0
+for i in range(n-1):
+
+    inter=inter+(((y[i][0])*const)/fact(i))
+print(inter)
