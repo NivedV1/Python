@@ -14,4 +14,6 @@ for k in range(1,n-1):
      for j in range(0,n-1-k):
         y[k][j]=y[k-1][j+1]-y[k-1][j]               
 print(y)
-
+for i in range(n):
+    inter=(y[i][1])
+print(inter)
