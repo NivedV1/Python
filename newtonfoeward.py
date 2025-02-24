@@ -9,14 +9,13 @@ n=5
 #    x_val.append(float(input("x data=")))
 #    y_val.append(float(input("y data=")))
 print(x_val);print(y_val)
-z=[[0]*i for i in range(n-1,0,-1)]
-print(z)
+diff=[[0]*i for i in range(n-1,0,-1)]
 for i in range(n-1):   
-    z[0][i]=y_val[i+1]-y_val[i]
+    diff[0][i]=y_val[i+1]-y_val[i]
 for k in range(1,n-1):
      for j in range(0,n-1-k):
-        z[k][j]=z[k-1][j+1]-z[k-1][j]               
-print(z)
+        diff[k][j]=diff[k-1][j+1]-diff[k-1][j]               
+print("difference table=",diff)
 xi=float(input("enter x to find y="))
 p=((xi-x_val[0])/(x_val[1]-x_val[0]))
 print(p)
@@ -24,5 +23,5 @@ a=1
 y=y_val[0]
 for i in range(n-1):
     a=(a*(p-i))/(i+1)
-    y=y+a*z[i][0]
+    y=y+a*diff[i][0]
 print(y)
