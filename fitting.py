@@ -34,10 +34,7 @@ n=int(input("enter the degree of polynomial="))
 print(x_data) 
 print(y_data)
 sum_matrix=zeros((n+1,n+1),int)
-sum_yx=zeros((n+1,1))
-print(sum_yx)
-for i in range(n+1):
-    for j in range(n+1):
+for j in range(n+1):
         sum_matrix[i][j]=sum(x**(i+j) for x in x_data)
 print(sum_matrix)
 
@@ -59,4 +56,8 @@ y=polyn(x)
 
 plt.plot(x,y)
 plt.plot(x_data,y_data,':dg')
+xlabel("x")
+ylabel("f(x)")
+legend()
+show()
 plt.show()
