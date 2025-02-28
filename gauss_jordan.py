@@ -11,14 +11,10 @@ while u[0][0]==0:
     for i in range(a):
         u[[0,i]]=u[[i,0]]
 print(u)
-
-
-c=u[0][0]
-
-for i in range(2*a):
-    u[0][i]=(u[0][i])/c
-    u[1][i]=u[1][i]-(u[1][i]*u[0][i])
-    u[2][i]=u[2][i]-(u[2][i]*u[0][i])
-print(u)
-
+for i in range(a):
+    u[i] = u[i]/u[i,i]
+    for j in range(a):
+        if j != i:
+            u[j]=u[j]-u[j,i]*u[i]
+print(u[:, a:])
 
