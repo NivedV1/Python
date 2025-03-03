@@ -2,16 +2,23 @@ from numpy import*
 a=int(input("size of matrix="))
 u=zeros((a,2*a),float)
 for p in range(a):
+    u[p][p+a]=1
     for l in range(a):
         b=int(input("enter values="))
         u[p][l]=b
-        u[p][p+a]=1
 u=array(u,float)
-while u[0][0]==0:
-    for i in range(a):
-        u[[0,i]]=u[[i,0]]
-print("orginal matrix",u[:,:a])
+#print("orginal matrix",u[:,:a])
+print("orginal matrix",u)
+
+
 for i in range(a):
+    j=0
+    while u[i][i]==0:
+        j=j+1
+        u[[i,j]]=u[[j,i]]
+        if j==a-1 :
+            break
+        print(u)
     u[i] = u[i]/u[i,i]
     for j in range(a):
         if j != i:
