@@ -16,5 +16,5 @@ for i in range(a):
     for j in range(a):
         if j != i:
             u[j]=u[j]-u[j,i]*u[i]
-print("inverse of matrix is=",u[:, a:])
+print("inverse of matrix is=",round(u[:, a:],3))
 
