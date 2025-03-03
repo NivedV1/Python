@@ -10,11 +10,11 @@ u=array(u,float)
 while u[0][0]==0:
     for i in range(a):
         u[[0,i]]=u[[i,0]]
-print(u)
+print("orginal matrix",u[:,:a])
 for i in range(a):
     u[i] = u[i]/u[i,i]
     for j in range(a):
         if j != i:
             u[j]=u[j]-u[j,i]*u[i]
-print(u[:, a:])
+print("inverse of matrix is=",u[:, a:])
 
