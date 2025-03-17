@@ -7,4 +7,4 @@ def montecarlo(num_samples):
             inside_circle=inside_circle+1
         pi=4*(inside_circle)/(num_samples)
     return(pi)
-print(montecarlo(1000000))
+print(montecarlo(100000))
