@@ -1,4 +1,3 @@
-n=16
-print(c)
-#for i in range(c):
-#    print(i)
+k=5
+print("S",k)
+print("nandana",k)
