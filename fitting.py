@@ -1,5 +1,3 @@
-import matplotlib
-matplotlib.use('TkAgg')
 from matplotlib import pyplot as plt
 from numpy import*
 def determinant(a):
@@ -35,17 +33,20 @@ print(x_data)
 print(y_data)
 sum_matrix=zeros((n+1,n+1),int)
 for j in range(n+1):
+    for i in range(n+1):
         sum_matrix[i][j]=sum(x**(i+j) for x in x_data)
 print(sum_matrix)
 
-for j in range(n+1):
+sum_yx=zeros((n+1,1),int)
+print(sum_yx)
+for j in range(n):
     sum_yx[j]=sum(y * x**j for x, y in zip(x_data, y_data))
 invmat=(inv(sum_matrix))
 print((sum_matrix))
 print(sum_yx)
 print(invmat)
 ans=dot(invmat,sum_yx)
-print(ans)
+print("ans",ans)
 po=len(ans)
 x =linspace(1, 8, 256)
 
@@ -56,8 +57,8 @@ y=polyn(x)
 
 plt.plot(x,y)
 plt.plot(x_data,y_data,':dg')
-xlabel("x")
-ylabel("f(x)")
-legend()
-show()
+plt.xlabel("x")
+plt.ylabel("f(x)")
+plt.legend()
+plt.show()
 plt.show()
