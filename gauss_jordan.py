@@ -10,7 +10,6 @@ u=array(u,float)
 #print("orginal matrix",u[:,:a])
 print("orginal matrix",u)
 
-
 for i in range(a):
     j=0
     while u[i][i]==0:
