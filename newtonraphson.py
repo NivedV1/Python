@@ -1,12 +1,13 @@
 def f(x):
-    return x**4-x-10
+    return 2*x**2-3*x-5
 def df(x):
-    return 4*x**3-1
+    return 4*x-3
 def sol(x):
     while True:
         h=f(x)/df(x)
-        if abs(h)<0.000001:
+        if abs(h)<1.0e-9:
             break
         x=x-h
     return print(x)
-sol(2)
+sol(4)
+sol(0)

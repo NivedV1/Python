@@ -64,7 +64,7 @@ class MonteCarloPiApp(tk.Toplevel):
 
         # Simulation parameters
         self.canvas_size = 700
-        self.num_samples = 5000
+        self.num_samples = 50000
         self.delay_ms = 1  # milliseconds between points
 
         # State

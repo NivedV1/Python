@@ -1,7 +1,7 @@
 from math import*
-a=int(input("coeff of X^2="))
-b=int(input("coeff of X="))
-c=int(input("constant="))
+a=float(input("coeff of X^2="))
+b=float(input("coeff of X="))
+c=float(input("constant="))
 print("qudratic equation is",a,"*X^2+",b,"*X+",c)
 if a==0:
     print("Not a quadratic equation")
