@@ -1,5 +1,4 @@
-from matplotlib import pyplot as plt
-from numpy import*
+from pylab import*
 def determinant(a):
     n=len(a)
     if n==1:
@@ -25,7 +24,7 @@ def inv(f):
     s=t/y
     return(s)
 x_data=[1,2,3,4,6,8]
-y_data=[2,3,4,4,5,6]
+y_data=[2,3,4,6,5,6]
 
 n=int(input("enter the degree of polynomial="))
 
@@ -55,6 +54,6 @@ polyn=poly1d(coefficents[::-1])
 print(polyn)
 y=polyn(x)
 
-plt.plot(x,y)
-plt.plot(x_data,y_data,':dg')
-plt.show()
+plot(x,y)
+plot(x_data,y_data,':dg')
+show()
